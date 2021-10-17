@@ -190,8 +190,10 @@ static const EngineInfo _orig_engine_info[] = {
 	MT( 39447,  20,  20,  50, 0              , T|A|S  ), //  85 Lev2 'Cyclops' (Electric)
 	MT( 42004,  20,  20,  50, 0              , T|A|S  ), //  86 Lev3 'Pegasus' (Electric)
 	MT( 42735,  20,  20,  50, 0              , T|A|S  ), //  87 Lev4 'Chimaera' (Electric)
+	MT(42935,   20,  20,  50, 0              , T|A|S  ), //  87 Lev5 'Maverick' (Electric)
 	MT( 36891,  20,  20,  60, 0              ,       Y), //  88 Wizzowow Rocketeer
 	MW(  1827,  20,  20,  50, CT_PASSENGERS  , T|A|S|Y), //  89 Passenger Carriage
+	MW(  1827,  20,  20,  50, CT_PASSENGERS  , T|A|S|Y), //  258 Passenger Carriage V2
 	MW(  1827,  20,  20,  50, CT_MAIL        , T|A|S|Y), //  90 Mail Van
 	MW(  1827,  20,  20,  50, CT_COAL        , T|A    ), //  91 Coal Truck
 	MW(  1827,  20,  20,  50, CT_OIL         , T|A|S  ), //  92 Oil Tanker
@@ -358,6 +360,7 @@ static const EngineInfo _orig_engine_info[] = {
 	MA( 13575,  20,  20,  40,                  T|A|S  ), // 253 Tricario Helicopter
 	MA( 28215,  20,  20,  30,                  T|A|S  ), // 254 Guru X2 Helicopter
 	MA( 13575,  20,  20,  99,                        Y), // 255 Powernaut Helicopter
+	MA( 33693,  20,  20,  60,                  T|A|S  ), // 256 Dinger 2000
 };
 #undef Y
 #undef S
@@ -505,8 +508,10 @@ static const RailVehicleInfo _orig_rail_vehicle_info[] = {
 	RVI(29, G,  74, 448,   12000, 120,   253, RC_E,  0, L, V), //  85 Lev2 'Cyclops' (Electric)
 	RVI(30, G,  82, 480,   15000, 130,   254, RC_E,  0, L, V), //  86 Lev3 'Pegasus' (Electric)
 	RVI(31, M,  95, 640,   20000, 150,   255, RC_E,  0, L, V), //  87 Lev4 'Chimaera' (Electric)
+	RVI(31, M,  120,952,   21000, 150,   255, RC_E,  0, L, V), //  87 Lev5 'Maverick' (Electric)
 	RVI(28, G,  70, 480,   10000, 120,   250, RC_E,  0, L, V), //  88 Wizzowow Rocketeer
 	RVI(60, W, 247,   0,       0,  25,     0, RC_W, 47, L, A), //  89 Passenger Carriage
+	RVI(60, W, 985,   0,       0,  25,     0, RC_W, 200, L, A), //  116 Passenger Carriage V2
 	RVI(62, W, 228,   0,       0,  21,     0, RC_W, 37, L, A), //  90 Mail Van
 	RVI(61, W, 176,   0,       0,  18,     0, RC_W, 37, L, A), //  91 Coal Truck
 	RVI(63, W, 200,   0,       0,  24,     0, RC_W, 37, L, A), //  92 Oil Tanker
@@ -647,6 +652,7 @@ static const AircraftVehicleInfo _orig_aircraft_vehicle_info[] = {
 	AVI(  9, 15,  81, H, SND_09_TAKEOFF_JET,                 20,  25, 15,  40 ), // 38 Tricario Helicopter
 	AVI( 19, 17,  77, H, SND_09_TAKEOFF_JET,                 20,  40, 20,  55 ), // 39 Guru X2 Helicopter
 	AVI( 25, 15,  80, H, SND_09_TAKEOFF_JET,                 20,  25, 10,  40 ), // 40 Powernaut Helicopter
+	AVI( 18, 160, 502, J, SND_3B_TAKEOFF_JET_FAST,           50, 181, 100, 800 ),// 41 Dinger 2000
 };
 #undef J
 #undef P

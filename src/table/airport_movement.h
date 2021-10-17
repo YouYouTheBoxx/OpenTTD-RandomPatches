@@ -317,6 +317,299 @@ static const AirportMovingData _airport_moving_data_intercontinental[77] = {
 	AMD(  197,  168, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N ), // 76 Fly to landing position in air1
 };
 
+/** Terminus4 Airport - 8 hangars, 8 runways, 36 terminals, 12 helipad. */
+static const AirportMovingData _airport_moving_data_terminus4[239] = {
+	/* Hangars and Outside Hangars */
+AMD(136,  200, AMED_EXACTPOS,                   DIR_NE), //  00 In Hangar 01
+AMD(200,  200, AMED_EXACTPOS,                   DIR_SW), //  01 In Hangar 02
+AMD(40,  136, AMED_EXACTPOS,                   DIR_NW), //  02 In Hangar 03
+AMD(40,  200, AMED_EXACTPOS,                   DIR_SE), //  03 In Hangar 04
+AMD(104,   40, AMED_EXACTPOS,                   DIR_SW), //  04 In Hangar 05
+AMD(40,   40, AMED_EXACTPOS,                   DIR_NE), //  05 In Hangar 06
+AMD(200,  104, AMED_EXACTPOS,                   DIR_SE), //  06 In Hangar 07
+AMD(200,   40, AMED_EXACTPOS,                   DIR_NW), //  07 In Hangar 08
+AMD(120,  200, 0,                               DIR_N), //  08 Taxi to right outside Hangar01
+AMD(216,  200, 0,                               DIR_N), //  09 Taxi to right outside Hangar02
+AMD(40,  120, 0,                               DIR_N), //  10 Taxi to right outside Hangar03
+AMD(40,  216, 0,                               DIR_N), //  11 Taxi to right outside Hangar04
+AMD(120,   40, 0,                               DIR_N), //  12 Taxi to right outside Hangar05
+AMD(24,   40, 0,                               DIR_N), //  13 Taxi to right outside Hangar06
+AMD(200,  120, 0,                               DIR_N), //  14 Taxi to right outside Hangar07
+AMD(200,   24, 0,                               DIR_N), //  15 Taxi to right outside Hangar08
+	/* Airplane Terminals */
+AMD(88,  168, AMED_EXACTPOS,                   DIR_NW), //  16 Terminal 01
+AMD(104,  168, AMED_EXACTPOS,                   DIR_NW), //  17 Terminal 02
+AMD(120,  168, AMED_EXACTPOS,                   DIR_NW), //  18 Terminal 03
+AMD(136,  168, AMED_EXACTPOS,                   DIR_NW), //  19 Terminal 04
+AMD(152,  168, AMED_EXACTPOS,                   DIR_NW), //  20 Terminal 05
+AMD(168,  168, AMED_EXACTPOS,                   DIR_N), //  21 Terminal 06
+AMD(200,  168, AMED_EXACTPOS,                   DIR_NW), //  22 Terminal 07
+AMD(216,  168, AMED_EXACTPOS,                   DIR_NW), //  23 Terminal 08
+AMD(232,  168, AMED_EXACTPOS,                   DIR_NW), //  24 Terminal 09
+AMD(72,   88, AMED_EXACTPOS,                   DIR_SW), //  25 Terminal 10
+AMD(72,  104, AMED_EXACTPOS,                   DIR_SW), //  26 Terminal 11
+AMD(72,  120, AMED_EXACTPOS,                   DIR_SW), //  27 Terminal 12
+AMD(72,  136, AMED_EXACTPOS,                   DIR_SW), //  28 Terminal 13
+AMD(72,  152, AMED_EXACTPOS,                   DIR_SW), //  29 Terminal 14
+AMD(72,  168, AMED_EXACTPOS,                   DIR_W), //  30 Terminal 15
+AMD(72,  200, AMED_EXACTPOS,                   DIR_SW), //  31 Terminal 16
+AMD(72,  216, AMED_EXACTPOS,                   DIR_SW), //  32 Terminal 17
+AMD(72,  232, AMED_EXACTPOS,                   DIR_SW), //  33 Terminal 18
+AMD(152,   72, AMED_EXACTPOS,                   DIR_SE), //  34 Terminal 19
+AMD(136,   72, AMED_EXACTPOS,                   DIR_SE), //  35 Terminal 20
+AMD(120,   72, AMED_EXACTPOS,                   DIR_SE), //  36 Terminal 21
+AMD(104,   72, AMED_EXACTPOS,                   DIR_SE), //  37 Terminal 22
+AMD(88,   72, AMED_EXACTPOS,                   DIR_SE), //  38 Terminal 23
+AMD(72,   72, AMED_EXACTPOS,                   DIR_S), //  39 Terminal 24
+AMD(40,   72, AMED_EXACTPOS,                   DIR_SE), //  40 Terminal 25
+AMD(24,   72, AMED_EXACTPOS,                   DIR_SE), //  41 Terminal 26
+AMD(8,   72, AMED_EXACTPOS,                   DIR_SE), //  42 Terminal 27
+AMD(168,  152, AMED_EXACTPOS,                   DIR_NE), //  43 Terminal 28
+AMD(168,  136, AMED_EXACTPOS,                   DIR_NE), //  44 Terminal 29
+AMD(168,  120, AMED_EXACTPOS,                   DIR_NE), //  45 Terminal 30
+AMD(168,  104, AMED_EXACTPOS,                   DIR_NE), //  46 Terminal 31
+AMD(168,   88, AMED_EXACTPOS,                   DIR_NE), //  47 Terminal 32
+AMD(168,   72, AMED_EXACTPOS,                   DIR_E), //  48 Terminal 33
+AMD(168,   40, AMED_EXACTPOS,                   DIR_NE), //  49 Terminal 34
+AMD(168,   24, AMED_EXACTPOS,                   DIR_NE), //  50 Terminal 35
+AMD(168,    8, AMED_EXACTPOS,                   DIR_NE), //  51 Terminal 36
+	/* Cargo Terminals (Uses Helipads) */
+AMD(152,  200, AMED_EXACTPOS,                   DIR_SE), //  52 Cargo Terminal 01
+AMD(168,  200, AMED_EXACTPOS,                   DIR_SE), //  53 Cargo Terminal 02
+AMD(184,  200, AMED_EXACTPOS,                   DIR_SE), //  54 Cargo Terminal 03
+AMD(40,  152, AMED_EXACTPOS,                   DIR_NE), //  55 Cargo Terminal 04
+AMD(40,  168, AMED_EXACTPOS,                   DIR_NE), //  56 Cargo Terminal 05
+AMD(40,  184, AMED_EXACTPOS,                   DIR_NE), //  57 Cargo Terminal 06
+AMD(88,   40, AMED_EXACTPOS,                   DIR_NW), //  58 Cargo Terminal 07
+AMD(72,   40, AMED_EXACTPOS,                   DIR_NW), //  59 Cargo Terminal 08
+AMD(56,   40, AMED_EXACTPOS,                   DIR_NW), //  60 Cargo Terminal 09
+AMD(200,   88, AMED_EXACTPOS,                   DIR_SW), //  61 Cargo Terminal 10
+AMD(200,   72, AMED_EXACTPOS,                   DIR_SW), //  62 Cargo Terminal 11
+AMD(200,   56, AMED_EXACTPOS,                   DIR_SW), //  63 Cargo Terminal 12
+	/* Helicopter Terminals */
+AMD(152,  200, AMED_EXACTPOS,                   DIR_SE), //  64 Helipad 01
+AMD(168,  200, AMED_EXACTPOS,                   DIR_SE), //  65 Helipad 02
+AMD(184,  200, AMED_EXACTPOS,                   DIR_SE), //  66 Helipad 03
+AMD(40,  152, AMED_EXACTPOS,                   DIR_NE), //  67 Helipad 04
+AMD(40,  168, AMED_EXACTPOS,                   DIR_NE), //  68 Helipad 05
+AMD(40,  184, AMED_EXACTPOS,                   DIR_NE), //  69 Helipad 06
+AMD(88,   40, AMED_EXACTPOS,                   DIR_NW), //  70 Helipad 07
+AMD(72,   40, AMED_EXACTPOS,                   DIR_NW), //  71 Helipad 08
+AMD(56,   40, AMED_EXACTPOS,                   DIR_NW), //  72 Helipad 09
+AMD(200,   88, AMED_EXACTPOS,                   DIR_SW), //  73 Helipad 10
+AMD(200,   72, AMED_EXACTPOS,                   DIR_SW), //  74 Helipad 11
+AMD(200,   56, AMED_EXACTPOS,                   DIR_SW), //  75 Helipad 12
+	/* Airplane - Holding Pattern */
+AMD(120,  648, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), //  76 Fly around waiting for a landing spot (south-east) 56,  504
+AMD(-408,  120, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), //  77 Fly around waiting for a landing spot (north-east) -280,   56
+AMD(120, -408, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), //  78 Fly around waiting for a landing spot (north-west) 152, -280
+AMD(648,  120, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), //  79 Fly around waiting for a landing spot (south-west) 504, 152
+	/* Helicopter - Holding Pattern */
+AMD(120,  120, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), //  80 Bufferspace before helipad
+AMD(120,  120, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), //  81 Bufferspace before helipad
+	/* Helicopter Hangar 01 */
+AMD(120,  208, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), //  82 Go to position for Hangarentrance in air
+AMD(120,  200, AMED_HELI_LOWER,                 DIR_N), //  83 Land in HANG01_block to go to hangar
+	// Start of Pod 1
+	/* Airplane Landing - Runway 01 */
+AMD(408,  232, AMED_HOLD | AMED_SLOWTURN,       DIR_N), //  84 Fly to landing position in air
+AMD(200,  232, AMED_HOLD | AMED_LAND,           DIR_N), //  85 Going down for land
+AMD(104,  232, AMED_HOLD | AMED_BRAKE,          DIR_N), //  86 Just landed, brake until end of runway
+AMD(104,  232, AMED_SLOWTURN,                   DIR_N), //  87 Just landed, taxi 1 square forward, this is to free the runway quicker.
+	/* Airplane Landing - Runway 02 */
+AMD(424,  216, AMED_HOLD | AMED_SLOWTURN,       DIR_N), //  88 Fly to landing position in air
+AMD(216,  216, AMED_HOLD | AMED_LAND,           DIR_N), //  89 Going down for land
+AMD(120,  216, AMED_HOLD | AMED_BRAKE,          DIR_N), //  90 Just landed, brake until end of runway
+	/* Airplane End Landing */
+AMD(104,  216, 0,                               DIR_N), //  91 Taxi02
+	/* Airplane Taxi */
+AMD(104,  200, 0,                               DIR_N), //  92 Taxi03
+AMD(104,  184, 0,                               DIR_N), //  93 Taxi04
+AMD(120,  184, 0,                               DIR_N), //  94 Taxi05
+AMD(136,  184, 0,                               DIR_N), //  95 Taxi06
+AMD(152,  184, 0,                               DIR_N), //  96 Taxi07
+AMD(168,  184, 0,                               DIR_N), //  97 Taxi08
+AMD(184,  184, 0,                               DIR_N), //  98 Taxi09
+AMD(200,  184, 0,                               DIR_N), //  99 Taxi10
+AMD(216,  184, 0,                               DIR_N), // 100 Taxi11
+AMD(232,  184, 0,                               DIR_N), // 101 Taxi12
+AMD(232,  200, 0,                               DIR_N), // 102 Taxi13
+	/* Airplane Takeoff */
+AMD(232,  216, 0,                               DIR_N), // 103 On Runway 02, prepare for takeoff
+AMD(200,  216, AMED_NOSPDCLAMP,                 DIR_N), // 104 Release control of runway, for smoother movement
+AMD(152,  216, AMED_NOSPDCLAMP,                 DIR_N), // 105 Airborne point - Takeoff
+AMD(88,  216, AMED_NOSPDCLAMP | AMED_TAKEOFF,  DIR_N), // 106 End Take off    Airplane leaves Airport Control
+	/* Helicopter Takeoff */
+AMD(152,  200, AMED_HELI_RAISE,                 DIR_N), // 107 Takeoff Helipad1
+AMD(168,  200, AMED_HELI_RAISE,                 DIR_N), // 108 Takeoff Helipad2
+AMD(184,  200, AMED_HELI_RAISE,                 DIR_N), // 109 Takeoff Helipad2
+	// End of Pod1
+	// Start of Pod 2
+	/* Airplane Landing - Runway 03 */
+AMD(8,  408, AMED_HOLD | AMED_SLOWTURN,       DIR_N), // 110 Fly to landing position in air
+AMD(8,  200, AMED_HOLD | AMED_LAND,           DIR_N), // 111 Going down for land
+AMD(8,  104, AMED_HOLD | AMED_BRAKE,          DIR_N), // 112 Just landed, brake until end of runway
+AMD(8,  104, AMED_SLOWTURN,                   DIR_N), // 113 Just landed, taxi 1 square forward, this is to free the runway quicker.
+	/* Airplane Landing - Runway 04 */
+AMD(24,  424, AMED_HOLD | AMED_SLOWTURN,       DIR_N), // 114 Fly to landing position in air
+AMD(24,  216, AMED_HOLD | AMED_LAND,           DIR_N), // 115 Going down for land
+AMD(24,  120, AMED_HOLD | AMED_BRAKE,          DIR_N), // 116 Just landed, brake until end of runway
+	/* Airplane End Landing */
+AMD(24,  104, 0,                               DIR_N), // 117 Taxi15
+	/* Airplane Taxi */
+AMD(40,  104, 0,                               DIR_N), // 118 Taxi16
+AMD(56,  104, 0,                               DIR_N), // 119 Taxi17
+AMD(56,  120, 0,                               DIR_N), // 120 Taxi18
+AMD(56,  136, 0,                               DIR_N), // 121 Taxi19
+AMD(56,  152, 0,                               DIR_N), // 122 Taxi20
+AMD(56,  168, 0,                               DIR_N), // 123 Taxi21
+AMD(56,  184, 0,                               DIR_N), // 124 Taxi22
+AMD(56,  200, 0,                               DIR_N), // 125 Taxi23
+AMD(56,  216, 0,                               DIR_N), // 126 Taxi24
+AMD(56,  232, 0,                               DIR_N), // 127 Taxi25
+AMD(40,  232, 0,                               DIR_N), // 128 Taxi26
+	/* Airplane Takeoff */
+AMD(24,  232, 0,                               DIR_N), // 129 On Runway 02, prepare for takeoff
+AMD(24,  200, AMED_NOSPDCLAMP,                 DIR_N), // 130 Release control of runway, for smoother movement
+AMD(24,  152, AMED_NOSPDCLAMP,                 DIR_N), // 131 Airborne point - Takeoff
+AMD(24,   88, AMED_NOSPDCLAMP | AMED_TAKEOFF,  DIR_N), // 132 End Take off    Airplane leaves Airport Control
+	/* Helicopter Hangar 03 */
+AMD(32,  120, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 133 Go to position for Hangarentrance in air
+AMD(40,  120, AMED_HELI_LOWER,                 DIR_N), // 134 Land in HANG03_block to go to hangar
+	/* Helicopter Takeoff */
+AMD(40,  152, AMED_HELI_RAISE,                 DIR_N), // 135 Takeoff Helipad1
+AMD(40,  168, AMED_HELI_RAISE,                 DIR_N), // 136 Takeoff Helipad2
+AMD(40,  184, AMED_HELI_RAISE,                 DIR_N), // 137 Takeoff Helipad2
+	// End of Pod2
+	// Start of Pod 3
+	/* Airplane Landing - Runway 05 */
+AMD(-168,    8, AMED_HOLD | AMED_SLOWTURN,       DIR_N), // 138 Fly to landing position in air
+AMD(40,    8, AMED_HOLD | AMED_LAND,           DIR_N), // 139 Going down for land
+AMD(136,    8, AMED_HOLD | AMED_BRAKE,          DIR_N), // 140 Just landed, brake until end of runway
+AMD(136,    8, AMED_SLOWTURN,                   DIR_N), // 141 Just landed, taxi 1 square forward, this is to free the runway quicker.
+	/* Airplane Landing - Runway 06 */
+AMD(-184,   24, AMED_HOLD | AMED_SLOWTURN,       DIR_N), // 142 Fly to landing position in air
+AMD(24,   24, AMED_HOLD | AMED_LAND,           DIR_N), // 143 Going down for land
+AMD(120,   24, AMED_HOLD | AMED_BRAKE,          DIR_N), // 144 Just landed, brake until end of runway
+	/* Airplane Taxi - End Landing */
+AMD(136,   24, 0,                               DIR_N), // 145 Taxi28
+	/* Airplane Taxi */
+AMD(136,   40, 0,                               DIR_N), // 146 Taxi29
+AMD(136,   56, 0,                               DIR_N), // 147 Taxi30
+AMD(120,   56, 0,                               DIR_N), // 148 Taxi31
+AMD(104,   56, 0,                               DIR_N), // 149 Taxi32
+AMD(88,   56, 0,                               DIR_N), // 150 Taxi33
+AMD(72,   56, 0,                               DIR_N), // 151 Taxi34
+AMD(56,   56, 0,                               DIR_N), // 152 Taxi35
+AMD(40,   56, 0,                               DIR_N), // 153 Taxi36
+AMD(24,   56, 0,                               DIR_N), // 154 Taxi37
+AMD(8,   56, 0,                               DIR_N), // 155 Taxi38
+AMD(8,   40, 0,                               DIR_N), // 156 Taxi39
+	/* Airplane Takeoff */
+AMD(8,   24, 0,                               DIR_N), // 157 On Runway 06, prepare for takeoff
+AMD(40,   24, AMED_NOSPDCLAMP,                 DIR_N), // 158 Release control of runway, for smoother movement
+AMD(88,   24, AMED_NOSPDCLAMP,                 DIR_N), // 159 Airborne point - Takeoff
+AMD(152,   24, AMED_NOSPDCLAMP | AMED_TAKEOFF,  DIR_N), // 160 End Take off    Airplane leaves Airport Control
+	/* Helicopter Hangar 05 */
+AMD(120,   32, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 161 Go to position for Hangarentrance in air
+AMD(120,   40, AMED_HELI_LOWER,                 DIR_N), // 162 Land in HANG05_block to go to hangar
+	/* Helicopter Takeoff */
+AMD(88,   40, AMED_HELI_RAISE,                 DIR_N), // 163 Takeoff Helipad07
+AMD(72,   40, AMED_HELI_RAISE,                 DIR_N), // 164 Takeoff Helipad08
+AMD(56,   40, AMED_HELI_RAISE,                 DIR_N), // 165 Takeoff Helipad09
+	// End of Pod3
+	// Start of Pod 4
+	/* Airplane Landing - Runway 07 */
+AMD(232, -168, AMED_HOLD | AMED_SLOWTURN,       DIR_N), // 166 Fly to landing position in air
+AMD(232,   40, AMED_HOLD | AMED_LAND,           DIR_N), // 167 Going down for land
+AMD(232,  136, AMED_HOLD | AMED_BRAKE,          DIR_N), // 168 Just landed, brake until end of runway
+AMD(232,  136, AMED_SLOWTURN,                   DIR_N), // 169 Just landed, taxi 1 square forward, this is to free the runway quicker.
+	/* Airplane Landing - Runway 04 */
+AMD(216, -184, AMED_HOLD | AMED_SLOWTURN,       DIR_N), // 170 Fly to landing position in air
+AMD(216,   24, AMED_HOLD | AMED_LAND,           DIR_N), // 171 Going down for land
+AMD(216,  120, AMED_HOLD | AMED_BRAKE,          DIR_N), // 172 Just landed, brake until end of runway
+	/* Airplane End Landing */
+AMD(216,  136, 0,                               DIR_N), // 173 Taxi15
+	/* Airplane Taxi */
+AMD(200,  136, 0,                               DIR_N), // 174 Taxi16
+AMD(184,  136, 0,                               DIR_N), // 175 Taxi17
+AMD(184,  120, 0,                               DIR_N), // 176 Taxi18
+AMD(184,  104, 0,                               DIR_N), // 177 Taxi19
+AMD(184,   88, 0,                               DIR_N), // 178 Taxi20
+AMD(184,   72, 0,                               DIR_N), // 179 Taxi21
+AMD(184,   56, 0,                               DIR_N), // 180 Taxi22
+AMD(184,   40, 0,                               DIR_N), // 181 Taxi23
+AMD(184,   24, 0,                               DIR_N), // 182 Taxi24
+AMD(184,    8, 0,                               DIR_N), // 183 Taxi25
+AMD(200,    8, 0,                               DIR_N), // 184 Taxi26
+	/* Airplane Takeoff */
+AMD(216,    8, 0,                               DIR_N), // 185 On Runway 02, prepare for takeoff
+AMD(216,   40, AMED_NOSPDCLAMP,                 DIR_N), // 186 Release control of runway, for smoother movement
+AMD(216,   88, AMED_NOSPDCLAMP,                 DIR_N), // 187 Airborne point - Takeoff
+AMD(216,  152, AMED_NOSPDCLAMP | AMED_TAKEOFF,  DIR_N), // 188 End Take off    Airplane leaves Airport Control
+	/* Helicopter Hangar 07 */
+AMD(208,  120, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 189 Go to position for Hangarentrance in air
+AMD(200,  120, AMED_HELI_LOWER,                 DIR_N), // 190 Land in HANG07_block to go to hangar
+	/* Helicopter Takeoff */
+AMD(200,   88, AMED_HELI_RAISE,                 DIR_N), // 191 Takeoff Helipad1
+AMD(200,   72, AMED_HELI_RAISE,                 DIR_N), // 192 Takeoff Helipad2
+AMD(200,   56, AMED_HELI_RAISE,                 DIR_N), // 193 Takeoff Helipad2
+	// End of Pod4
+	/* Crossover Taxi from Pod 1 to Pod 2 */
+AMD(88,  184, 0,                               DIR_N), // 194 Crossover 
+AMD(72,  184, 0,                               DIR_N), // 195 Crossover
+	/* Crossover Taxi from Pod 2 to Pod 3 */
+AMD(56,   88, 0,                               DIR_N), // 196 Crossover 
+AMD(56,   72, 0,                               DIR_N), // 197 Crossover
+	/* Crossover Taxi from Pod 3 to Pod 4 */
+AMD(152,   56, 0,                               DIR_N), // 198 Crossover 
+AMD(168,   56, 0,                               DIR_N), // 199 Crossover
+	/* Crossover Taxi from Pod 4 to Pod 1 */
+AMD(184,  152, 0,                               DIR_N), // 200 Crossover 
+AMD(184,  168, 0,                               DIR_N), // 201 Crossover
+	/*  Added holding spots */
+AMD(600,  168, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 202 Fly around waiting for a landing spot SW Check Runway 2
+AMD(584,  184, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 203 Fly around waiting for a landing spot SW Check Runway 1
+AMD(72,  600, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 204 Fly around waiting for a landing spot SE Check Runway 4
+AMD(56,  584, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 205 Fly around waiting for a landing spot SE Check Runway 3
+AMD(-360,   72, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 206 Fly around waiting for a landing spot NE Check Runway 6
+AMD(-344,   56, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 207 Fly around waiting for a landing spot NE Check Runway 5
+AMD(168, -360, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 208 Fly around waiting for a landing spot NW Check Runway 8
+AMD(184, -344, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 209 Fly around waiting for a landing spot NW Check Runway 7
+	/* Helicopter Entry. Helicopters need a seperate entry or it will clear flags for airplanes causing then to run into each other.*/
+AMD(136,  136, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 210 Helicopter Entry
+	// Abort Landings
+AMD(72,  232, AMED_NOSPDCLAMP | AMED_TAKEOFF,  DIR_N), // 211 Abort Landing Runway 01
+AMD(8,   72, AMED_NOSPDCLAMP | AMED_TAKEOFF,  DIR_N), // 212 Abort Landing Runway 03
+AMD(168,    8, AMED_NOSPDCLAMP | AMED_TAKEOFF,  DIR_N), // 213 Abort Landing Runway 05
+AMD(232,  168, AMED_NOSPDCLAMP | AMED_TAKEOFF,  DIR_N), // 214 Abort Landing Runway 07
+	// Helicopter Positioning
+AMD(152,  208, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 215 Get in position for Helipad01
+AMD(168,  208, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 216 Get in position for Helipad02
+AMD(184,  208, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 217 Get in position for Helipad03
+AMD(32,  152, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 218 Get in position for Helipad04
+AMD(32,  168, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 219 Get in position for Helipad05
+AMD(32,  184, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 220 Get in position for Helipad06
+AMD(88,   32, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 221 Get in position for Helipad07
+AMD(72,   32, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 222 Get in position for Helipad08
+AMD(56,   32, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 223 Get in position for Helipad09
+AMD(208,   88, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 224 Get in position for Helipad10
+AMD(208,   72, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 225 Get in position for Helipad11
+AMD(208,   56, AMED_NOSPDCLAMP | AMED_SLOWTURN, DIR_N), // 226 Get in position for Helipad12
+	// Helicopter Landing at Terminals
+AMD(152,  200, AMED_HELI_LOWER,                 DIR_N), // 227 Land at Helipad01
+AMD(168,  200, AMED_HELI_LOWER,                 DIR_N), // 228 Land at Helipad02
+AMD(184,  200, AMED_HELI_LOWER,                 DIR_N), // 229 Land at Helipad03
+AMD(40,  152, AMED_HELI_LOWER,                 DIR_N), // 230 Land at Helipad04
+AMD(40,  168, AMED_HELI_LOWER,                 DIR_N), // 231 Land at Helipad05
+AMD(40,  184, AMED_HELI_LOWER,                 DIR_N), // 232 Land at Helipad06
+AMD(88,   40, AMED_HELI_LOWER,                 DIR_N), // 233 Land at Helipad07
+AMD(72,   40, AMED_HELI_LOWER,                 DIR_N), // 234 Land at Helipad08
+AMD(56,   40, AMED_HELI_LOWER,                 DIR_N), // 235 Land at Helipad09
+AMD(200,   88, AMED_HELI_LOWER,                 DIR_N), // 236 Land at Helipad10
+AMD(200,   72, AMED_HELI_LOWER,                 DIR_N), // 237 Land at Helipad11
+AMD(200,   56, AMED_HELI_LOWER,                 DIR_N), // 238 Land at Helipad12
+};
 
 /** Heliport (heliport). */
 static const AirportMovingData _airport_moving_data_heliport[9] = {
@@ -740,6 +1033,98 @@ static const AirportFTAbuildup _airport_fta_intercontinental[] = {
 	{ MAX_ELEMENTS, TO_ALL, 0, 0 } // end marker. DO NOT REMOVE
 };
 
+/* intercontinental */
+static const HangarTileTable _airport_depots_terminus4[] = { {{0, 5}, DIR_SE, 0}, {{8, 4}, DIR_SE, 1} };
+static const byte _airport_terminal_terminus4[] = { 2, 4, 4 };
+static const byte _airport_entries_terminus4[] = { 44, 43, 46, 45 };
+static const AirportFTAbuildup _airport_fta_terminus4[] = {
+	{  0, HANGAR, NOTHING_block, 2 }, { 0, TERMGROUP, HANGAR1_AREA_block | TERM_GROUP1_block, 0 }, { 0, TERMGROUP, HANGAR1_AREA_block | TERM_GROUP1_block, 1 }, { 0, TAKEOFF, HANGAR1_AREA_block | TERM_GROUP1_block, 2 }, { 0, TO_ALL, 0, 2 },
+	{  1, HANGAR, NOTHING_block, 3 }, { 1, TERMGROUP, HANGAR2_AREA_block, 1 }, { 1, TERMGROUP, HANGAR2_AREA_block, 0 }, { 1, TO_ALL, 0, 3 },
+	{  2, TERMGROUP, HANGAR1_AREA_block, 0 }, { 2, TERMGROUP, TERM_GROUP1_block, 0 }, { 2, TERMGROUP, TERM_GROUP1_block, 1 }, { 2, HANGAR, 0, 0 }, { 2, TAKEOFF, TERM_GROUP1_block, 27 }, { 2, TERM5, 0, 26 }, { 2, TERM6, 0, 26 }, { 2, TERM7, 0, 26 }, { 2, TERM8, 0, 26 }, { 2, HELIPAD1, 0, 26 }, { 2, HELIPAD2, 0, 26 }, { 2, HELITAKEOFF, 0, 74 }, { 2, TO_ALL, 0, 27 },
+	{  3, TERMGROUP, HANGAR2_AREA_block, 0 }, { 3, HANGAR, 0, 1 }, { 3, HELITAKEOFF, 0, 75 }, {3, TAKEOFF, 0, 59}, { 3, TO_ALL, 0, 20 },
+	{  4, TERM1, TERM1_block, 26 }, { 4, HANGAR, HANGAR1_AREA_block | TERM_GROUP1_block, 26 }, { 4, TO_ALL, 0, 26 },
+	{  5, TERM2, TERM2_block, 27 }, { 5, HANGAR, HANGAR1_AREA_block | TERM_GROUP1_block, 27 }, { 5, TO_ALL, 0, 27 },
+	{  6, TERM3, TERM3_block, 28 }, { 6, HANGAR, HANGAR1_AREA_block | TERM_GROUP1_block, 28 }, { 6, TO_ALL, 0, 28 },
+	{  7, TERM4, TERM4_block, 29 }, { 7, HANGAR, HANGAR1_AREA_block | TERM_GROUP1_block, 29 }, { 7, TO_ALL, 0, 29 },
+	{  8, TERM5, TERM5_block, 18 }, { 8, HANGAR, HANGAR2_AREA_block, 18 }, { 8, TO_ALL, 0, 18 },
+	{  9, TERM6, TERM6_block, 19 }, { 9, HANGAR, HANGAR2_AREA_block, 19 }, { 9, TO_ALL, 0, 19 },
+	{ 10, TERM7, TERM7_block, 20 }, { 10, HANGAR, HANGAR2_AREA_block, 20 }, { 10, TO_ALL, 0, 20 },
+	{ 11, TERM8, TERM8_block, 21 }, { 11, HANGAR, HANGAR2_AREA_block, 21 }, { 11, TO_ALL, 0, 21 },
+	{ 12, HELIPAD1, HELIPAD1_block, 12 }, { 12, HANGAR, 0, 70 }, { 12, HELITAKEOFF, 0, 72 },
+	{ 13, HELIPAD2, HELIPAD2_block, 13 }, { 13, HANGAR, 0, 71 }, { 13, HELITAKEOFF, 0, 73 },
+	{ 14, TO_ALL, TERM_GROUP2_ENTER1_block, 15 },
+	{ 15, TO_ALL, TERM_GROUP2_ENTER1_block, 16 },
+	{ 16, TO_ALL, TERM_GROUP2_ENTER2_block, 17 },
+	{ 17, TO_ALL, TERM_GROUP2_ENTER2_block, 18 },
+	{ 18, TERMGROUP, TERM_GROUP2_block, 0 }, { 18, TERM5, TERM5_block, 8 }, { 18, TAKEOFF, 0, 19 }, { 18, HELITAKEOFF, HELIPAD1_block, 19 }, { 18, TO_ALL, TERM_GROUP2_EXIT1_block, 19 },
+	{ 19, TERMGROUP, TERM_GROUP2_block, 0 }, { 19, TERM6, TERM6_block, 9 }, { 19, TERM5, 0, 18 }, { 19, TAKEOFF, 0, 57 }, { 19, HELITAKEOFF, HELIPAD1_block, 20 }, { 19, TO_ALL, TERM_GROUP2_EXIT1_block, 20 }, // add exit to runway out 2
+	{ 20, TERMGROUP, TERM_GROUP2_block, 0 }, { 20, TERM7, TERM7_block, 10 }, { 20, TERM5, 0, 19 }, { 20, TERM6, 0, 19 }, { 20, HANGAR, HANGAR2_AREA_block, 3 }, { 20, TAKEOFF, 0, 19 }, { 20, TO_ALL, TERM_GROUP2_EXIT1_block, 21 },
+	{ 21, TERMGROUP, TERM_GROUP2_block, 0 }, { 21, TERM8, TERM8_block, 11 }, { 21, HANGAR, HANGAR2_AREA_block, 20 }, { 21, TERM5, 0, 20 }, { 21, TERM6, 0, 20 }, { 21, TERM7, 0, 20 }, { 21, TAKEOFF, 0, 20 }, { 21, TO_ALL, TERM_GROUP2_EXIT1_block, 22 },
+	{ 22, TERMGROUP, TERM_GROUP2_block, 0 }, { 22, HANGAR, 0, 21 }, { 22, TERM5, 0, 21 }, { 22, TERM6, 0, 21 }, { 22, TERM7, 0, 21 }, { 22, TERM8, 0, 21 }, { 22, TAKEOFF, 0, 21 }, { 22, TO_ALL, 0, 23 },
+	{ 23, TO_ALL, TERM_GROUP2_EXIT1_block, 70 },
+	{ 24, TO_ALL, TERM_GROUP2_EXIT2_block, 25 },
+	{ 25, TERMGROUP, TERM_GROUP2_EXIT2_block, 0 }, { 25, HANGAR, HANGAR1_AREA_block | TERM_GROUP1_block, 29 }, { 25, TO_ALL, 0, 29 },
+	{ 26, TERMGROUP, TERM_GROUP1_block, 0 }, { 26, TERM1, TERM1_block, 4 }, { 26, HANGAR, HANGAR1_AREA_block, 27 }, { 26, TERM5, TERM_GROUP2_ENTER1_block, 14 }, { 26, TERM6, TERM_GROUP2_ENTER1_block, 14 }, { 26, TERM7, TERM_GROUP2_ENTER1_block, 14 }, { 26, TERM8, TERM_GROUP2_ENTER1_block, 14 }, { 26, HELIPAD1, TERM_GROUP2_ENTER1_block, 14 }, { 26, HELIPAD2, TERM_GROUP2_ENTER1_block, 14 }, { 26, HELITAKEOFF, TERM_GROUP2_ENTER1_block, 14 }, { 26, TO_ALL, 0, 27 },
+	{ 27, TERMGROUP, TERM_GROUP1_block, 0 }, { 27, TERM2, TERM2_block, 5 }, { 27, HANGAR, HANGAR1_AREA_block, 2 }, { 27, TERM1, 0, 26 }, { 27, TERM5, 0, 26 }, { 27, TERM6, 0, 26 }, { 27, TERM7, 0, 26 }, { 27, TERM8, 0, 26 }, { 27, HELIPAD1, 0, 14 }, { 27, HELIPAD2, 0, 14 }, { 27, TO_ALL, 0, 28 },
+	{ 28, TERMGROUP, TERM_GROUP1_block, 0 }, { 28, TERM3, TERM3_block, 6 }, { 28, HANGAR, HANGAR1_AREA_block, 27 }, { 28, TERM1, 0, 27 }, { 28, TERM2, 0, 27 }, { 28, TERM4, 0, 29 }, { 28, TERM5, 0, 14 }, { 28, TERM6, 0, 14 }, { 28, TERM7, 0, 14 }, { 28, TERM8, 0, 14 }, { 28, HELIPAD1, 0, 14 }, { 28, HELIPAD2, 0, 14 }, { 28, TO_ALL, 0, 29 },
+	{ 29, TERMGROUP, TERM_GROUP1_block, 0 }, { 29, TERM4, TERM4_block, 7 }, { 29, HANGAR, HANGAR1_AREA_block, 27 }, { 29, TAKEOFF, 0, 30 }, { 29, TO_ALL, 0, 28 },
+	{ 30, TO_ALL, OUT_WAY_block2, 31 },
+	{ 31, TO_ALL, OUT_WAY_block, 32 },
+	/* takeoff */
+	{ 32, TAKEOFF, RUNWAY_OUT_block, 33 },
+	{ 33, TO_ALL, RUNWAY_OUT_block, 34 },
+	{ 34, STARTTAKEOFF, NOTHING_block, 35 },
+	{ 35, ENDTAKEOFF, NOTHING_block, 0 },
+	/* landing */
+	{ 36, TO_ALL, 0, 0 },
+	{ 37, LANDING, RUNWAY_IN_block, 38 },
+	{ 38, TO_ALL, RUNWAY_IN_block, 39 },
+	{ 39, TO_ALL, RUNWAY_IN_block, 40 },
+	{ 40, ENDLANDING, RUNWAY_IN_block, 41 },
+	{ 41, TO_ALL, IN_WAY_block, 42 },
+	{ 42, TERMGROUP, IN_WAY_block, 0 }, { 42, TERMGROUP, TERM_GROUP1_block, 0 }, { 42, TERMGROUP, TERM_GROUP1_block, 1 }, { 42, HANGAR, 0, 2 }, { 42, TO_ALL, 0, 26 },
+	/* In Air */
+	{ 43, TO_ALL, 0, 44 },
+	{ 44, FLYING, 0, 45 }, { 44, HELILANDING, 0, 47 }, { 44, LANDING, 0, 69 }, { 44, TO_ALL, 0, 45 },
+	{ 45, TO_ALL, 0, 46 },
+	{ 46, FLYING, 0, 43 }, { 46, LANDING, 0, 76 }, { 46, TO_ALL, 0, 43 },
+	/* Helicopter -- stay in air in special place as a buffer to choose from helipads */
+	{ 47, HELILANDING, PRE_HELIPAD_block, 48 },
+	{ 48, HELIENDLANDING, PRE_HELIPAD_block, 48 }, { 48, HELIPAD1, 0, 49 }, { 48, HELIPAD2, 0, 50 }, { 48, HANGAR, 0, 55 },
+	{ 49, TO_ALL, NOTHING_block, 51 },
+	{ 50, TO_ALL, NOTHING_block, 52 },
+	/* landing */
+	{ 51, TERMGROUP, NOTHING_block, 0 }, { 51, HELIPAD1, HELIPAD1_block, 12 }, { 51, HANGAR, 0, 55 }, { 51, TO_ALL, 0, 12 },
+	{ 52, TERMGROUP, NOTHING_block, 0 }, { 52, HELIPAD2, HELIPAD2_block, 13 }, { 52, HANGAR, 0, 55 }, { 52, TO_ALL, 0, 13 },
+	/* Helicopter -- takeoff */
+	{ 53, HELITAKEOFF, NOTHING_block, 0 },
+	{ 54, HELITAKEOFF, NOTHING_block, 0 },
+	{ 55, TO_ALL, HANGAR2_AREA_block, 56 }, // need to go to hangar when waiting in air
+	{ 56, TO_ALL, HANGAR2_AREA_block, 3 },
+	/* runway 2 out support */
+	{ 57, TERMGROUP, OUT_WAY2_block, 0 }, { 57, TAKEOFF, 0, 58 }, { 57, TO_ALL, 0, 58 },
+	{ 58, TO_ALL, OUT_WAY2_block, 59 },
+	{ 59, TAKEOFF, RUNWAY_OUT2_block, 60 }, // takeoff
+	{ 60, TO_ALL, RUNWAY_OUT2_block, 61 },
+	{ 61, STARTTAKEOFF, NOTHING_block, 62 },
+	{ 62, ENDTAKEOFF, NOTHING_block, 0 },
+	/* runway 2 in support */
+	{ 63, LANDING, RUNWAY_IN2_block, 64 },
+	{ 64, TO_ALL, RUNWAY_IN2_block, 65 },
+	{ 65, TO_ALL, RUNWAY_IN2_block, 66 },
+	{ 66, ENDLANDING, RUNWAY_IN2_block, 0 }, { 66, TERMGROUP, 0, 1 }, { 66, TERMGROUP, 0, 0 }, { 66, TO_ALL, 0, 67 },
+	{ 67, TO_ALL, IN_WAY2_block, 68 },
+	{ 68, TERMGROUP, IN_WAY2_block, 0 }, { 68, TERMGROUP, TERM_GROUP2_block, 1 }, { 68, TERMGROUP, TERM_GROUP1_block, 0 }, { 68, HANGAR, HANGAR2_AREA_block, 22 }, { 68, TO_ALL, 0, 22 },
+	{ 69, TERMGROUP, RUNWAY_IN2_block, 0 }, { 69, TO_ALL, RUNWAY_IN2_block, 63 },
+	{ 70, TERMGROUP, TERM_GROUP2_EXIT1_block, 0 }, { 70, HELIPAD1, HELIPAD1_block, 12 }, { 70, HELITAKEOFF, HELIPAD1_block, 12 }, { 70, TO_ALL, 0, 71 },
+	{ 71, TERMGROUP, TERM_GROUP2_EXIT1_block, 0 }, { 71, HELIPAD2, HELIPAD2_block, 13 }, { 71, HELITAKEOFF, HELIPAD1_block, 12 }, { 71, TO_ALL, 0, 24 },
+	{ 72, TO_ALL, HELIPAD1_block, 53 },
+	{ 73, TO_ALL, HELIPAD2_block, 54 },
+	{ 74, HELITAKEOFF, NOTHING_block, 0 },
+	{ 75, HELITAKEOFF, NOTHING_block, 0 },
+	{ 76, TERMGROUP, RUNWAY_IN_block, 0 }, { 76, TO_ALL, RUNWAY_IN_block, 37 },
+	{ MAX_ELEMENTS, TO_ALL, 0, 0 } // end marker. DO NOT REMOVE
+};
 
 /* heliports, oilrigs don't have depots */
 static const byte _airport_entries_heliport[] = { 7, 7, 7, 7 };

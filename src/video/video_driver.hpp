@@ -316,7 +316,12 @@ protected:
 
 	std::chrono::steady_clock::duration GetDrawInterval()
 	{
-		return std::chrono::microseconds(1000000 / _settings_client.gui.refresh_rate);
+		if (_settings_client.gui.refresh_rate > 75) {
+			return std::chrono::microseconds(100000 / _settings_client.gui.refresh_rate);
+		}
+		else {
+			return std::chrono::microseconds(1 / _settings_client.gui.refresh_rate);
+		}
 	}
 
 	/** Execute all queued commands. */

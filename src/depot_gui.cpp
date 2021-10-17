@@ -123,7 +123,9 @@ void CcCloneVehicle(const CommandCost &result, TileIndex tile, uint32 p1, uint32
 
 	const Vehicle *v = Vehicle::Get(_new_vehicle_id);
 
-	ShowVehicleViewWindow(v);
+	v->cur_implicit_order_index + 1;
+
+	//ShowVehicleViewWindow(v);
 }
 
 static void TrainDepotMoveVehicle(const Vehicle *wagon, VehicleID sel, const Vehicle *head)

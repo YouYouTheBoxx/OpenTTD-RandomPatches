@@ -66,6 +66,7 @@ static inline uint GetFeatureIndex(uint window_number)
  */
 static inline uint GetInspectWindowNumber(GrfSpecFeature feature, uint index)
 {
+	index = 0;
 	assert((index >> 24) == 0);
 	return (feature << 24) | index;
 }
